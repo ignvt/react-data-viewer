@@ -3,22 +3,22 @@ import ViewObject from "../components/ViewObject"
 import ViewPrimitive from "../components/ViewPrimitive/ViewPrimitive"
 
 export const getData = (data) => {
-  const difinitionData = data
-  if (typeof difinitionData === 'string') {
+  const definitionData = data
+  if (typeof definitionData === 'string') {
     try {
-      const jsonData = JSON.parse(difinitionData)
+      const jsonData = JSON.parse(definitionData)
       if (getNodeType(jsonData) === 'object') {
         return jsonData
       } else {
-        return String(difinitionData)
+        return String(definitionData)
       }
     } catch (e) {
-      console.error(difinitionData, 'Invalid convert string to object')
-      return difinitionData
+      console.error(definitionData, 'Invalid convert string to object')
+      return definitionData
     }
 
   }
-  return difinitionData
+  return definitionData
 }
 
 const isEmptyObject = (object) => {
@@ -46,12 +46,8 @@ export const getNodeType = (node) => {
   if (node === null) return 'null'
   if (Array.isArray(node)) return 'array'
   if (!node && typeof node !== 'undefined' && isNaN(node)) return 'NaN'
-  if (node instanceof Date) {
-    return 'date'
-  }
-  if (node instanceof RegExp) {
-    return 'regexp'
-  }
+  if (node instanceof Date) return 'date'
+  if (node instanceof RegExp) return 'regexp'
   return typeof node
 }
 
