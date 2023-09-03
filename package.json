@@ -1,6 +1,5 @@
 {
   "name": "react18-data-viewer",
-  "private": false,
   "version": "1.0.0",
   "description": "Simple javascript data viewer for react",
   "type": "module",
@@ -9,11 +8,13 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "main": "./dist/react18-data-viewer.js",
+  "module": "./dist/react18-data-viewer.cjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ignvt/react-data-viewer.git"
   },
-  "author": "me",
+  "author": "ignvt",
   "license": "MIT",
   "dependencies": {
     "react": "18.2.0",
