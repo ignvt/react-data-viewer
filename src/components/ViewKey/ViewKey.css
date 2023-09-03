@@ -1,0 +1,53 @@
+.separator {
+  margin: 0 10px 0 4px;
+}
+
+.type {
+  margin: 0 2px 0 4px;
+  padding: 0 4px;
+  background-color: rgb(156, 156, 156);
+  border-radius: 4px;
+  font-size: 12px;
+  font-style: italic;
+  color: white;
+
+  &.number,
+  &.bigint {
+    background-color: rgb(67, 67, 253);
+  }
+
+  &.string {
+    color: black;
+    background-color: rgb(255, 209, 83);
+  }
+
+  &.boolean {
+    color: black;
+    background-color: rgb(97, 255, 83);
+  }
+
+  &.null {
+    color: black;
+    background-color: rgb(235, 83, 255);
+  }
+
+  &.undefined {
+    color: black;
+    background-color: rgb(255, 109, 83);
+  }
+
+  &.NaN {
+    color: black;
+    background-color: rgb(83, 200, 255);
+  }
+
+  &.object {
+    color: white;
+    background-color: rgb(131, 131, 131);
+  }
+
+  &.array {
+    color: white;
+    background-color: rgb(2, 133, 67);
+  }
+}
